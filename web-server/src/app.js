@@ -4,6 +4,7 @@ const exp = require("constants");
 const hsb = require("hbs");
 const { forecastFromAddress } = require("./utils/forecast");
 const app = express();
+const port = process.env.PORT || 3000;
 
 console.log(__dirname);
 console.log(__filename);
@@ -68,6 +69,6 @@ app.get("*", (req, res) => {
 });
 
 
-app.listen(3000, () => {
-  console.log("KEK started");
+app.listen(port, () => {
+  console.log(`KEK started on port ${port}`);
 });

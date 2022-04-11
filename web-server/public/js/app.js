@@ -12,13 +12,13 @@ weatherForm.addEventListener("submit", (e) => {
   const kAccessKey = "576f56d5c05e2f819efab11a0d9b5967";
   const kUrl = "http://api.weatherstack.com/current";
   const _url = `${kUrl}?access_key=${kAccessKey}&query=${location}&units=m`;
-  fetch(_url).then((response) => {
+  fetch(`/weather?address=${location}`).then((response) => {
     response.json().then((data) => {
       console.log(data);
       if (data.error) {
         msgOk.textContent = `Error: ${data.error.info}`;
       } else {
-        msgOk.textContent = `In ${location} it is ${data.current.temperature} degrees. Forecast is ${data.current.weather_descriptions[0]}`;
+        msgOk.textContent = `In ${location} it is ${data.temperature} degrees. Forecast is ${data.description}`;
       }
     });
   });
