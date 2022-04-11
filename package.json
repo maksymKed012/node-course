@@ -1,19 +1,17 @@
 {
-  "name": "kek",
+  "name": "web-server",
   "version": "1.0.0",
   "description": "",
-  "main": "kek.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
+  "keywords": [],
   "author": "",
-  "type": "module",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.0.0",
-    "nodemon": "^1.18.5",
-    "postman-request": "^2.88.1-postman.31",
-    "validator": "^13.7.0",
-    "yargs": "^12.0.2"
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "postman-request": "^2.88.1-postman.31"
   }
 }
